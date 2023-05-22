@@ -1,6 +1,8 @@
 import { Roboto, Karla } from 'next/font/google';
 import clsx from 'clsx';
 
+import { Header } from '@/widgets/header';
+
 import './reset.css';
 
 const roboto = Roboto({
@@ -26,7 +28,10 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="ru" className={clsx(roboto.variable, karla.variable)}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

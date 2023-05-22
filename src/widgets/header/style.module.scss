@@ -1,0 +1,43 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 60px;
+  box-shadow: -2px 0 8px 2px rgb(0 0 0 / 10%);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 6px 0;
+  }
+
+  &__img {
+    position: relative;
+    width: 46px;
+    height: 49px;
+  }
+
+  &__links {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__link {
+    color: #000;
+    font-weight: 700;
+    font-size: 1.125rem;
+    font-family: var(--font-secondary);
+    line-height: 1.3125rem;
+    text-decoration: none;
+    transition: color .2s;
+
+    &:hover {
+      color: #00B0C8;
+    }
+  }
+}
