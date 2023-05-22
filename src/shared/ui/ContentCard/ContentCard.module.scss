@@ -1,0 +1,65 @@
+.card {
+  display: block;
+  padding: 38px 16px;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: #FAFAFA;
+  border-radius: 4px;
+  box-shadow:
+    0 1px 5px rgb(0 0 0 / 20%),
+    0 3px 4px rgb(0 0 0 / 12%),
+    0 2px 4px rgb(0 0 0 / 14%);
+
+  &:has(.footer__img) {
+    padding: 0 16px 12px;
+    background-color: #fff;
+  }
+
+  &__img {
+    position: relative;
+    height: 168px;
+  }
+
+  &__title {
+    overflow: hidden;
+    color: #212121;
+    font-weight: 500;
+    font-size: 1.25rem;
+    font-family: var(--font-main);
+    line-height: 1.875rem;
+    white-space: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
+
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+
+  &__description {
+    display: block;
+    margin-top: 2px;
+    overflow: hidden;
+    color: #646464;
+    font-size: .875rem;
+    font-family: var(--font-main);
+    line-height: 1.3125rem;
+    white-space: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
+  }
+
+  &__footer {
+    display: block;
+    margin-top: 4px;
+    overflow: hidden;
+    color: #646464;
+    font-weight: 700;
+    font-size: .875rem;
+    font-family: var(--font-main);
+    line-height: 1.3125rem;
+    white-space: nowrap;
+    text-align: center;
+    text-overflow: ellipsis;
+  }
+}
