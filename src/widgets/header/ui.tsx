@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { ContentContainer } from '@/shared/ui';
 
 import { routes } from './confing';
 
@@ -10,7 +11,7 @@ import logo from './assets/logo.png';
 export function Header() {
   return (
     <header className={classes.header}>
-      <div className={classes.header__container}>
+      <ContentContainer className={classes.header__container}>
         <div className={classes.header__img}>
           <Image src={logo} alt="logo" fill />
         </div>
@@ -25,7 +26,7 @@ export function Header() {
             ))}
           </ul>
         </nav>
-      </div>
+      </ContentContainer>
     </header>
   );
 }
