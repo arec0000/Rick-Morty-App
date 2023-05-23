@@ -1,0 +1,25 @@
+.input {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 18px;
+  border: 1px solid rgb(0 0 0 / 50%);
+  border-radius: 8px;
+  transition: border .2s;
+
+  &:focus-within {
+    border: 1px solid rgb(0 0 0 / 50%);
+  }
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+
+  input {
+    font-family: var(--font-main);
+    line-height: 1.5rem;
+    border: none;
+    outline: none;
+  }
+}

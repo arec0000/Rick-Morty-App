@@ -1,0 +1,44 @@
+.select {
+  position: relative;
+  display: flex;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    content: '';
+  }
+
+  &:focus-within::before {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  select {
+    display: block;
+    width: 100%;
+    padding: 18px 30px 18px 14px;
+    color: rgb(0 0 0 / 60%);
+    font-family: var(--font-main);
+    line-height: 1.1875rem;
+    border: 1px solid rgb(0 0 0 / 38%);
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  &_selected {
+    select {
+      color: #000;
+    }
+  }
+
+  option {
+    color: #000;
+  }
+}
