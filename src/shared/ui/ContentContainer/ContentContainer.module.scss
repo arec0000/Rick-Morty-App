@@ -1,5 +1,5 @@
 .contentContainer {
   flex-grow: 1;
-  max-width: 1020px;
+  width: min(1020px, 100%);
   margin: 0 auto;
 }
