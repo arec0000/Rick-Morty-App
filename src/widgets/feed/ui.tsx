@@ -52,7 +52,7 @@ export function Feed({
       </div>
       {!pagination ? null : (
         <div className={classes.feed__pagination}>
-          <PaginationButton>LOAD MORE</PaginationButton>
+          <PaginationButton>NEXT</PaginationButton>
         </div>
       )}
     </div>
