@@ -3,7 +3,9 @@
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const nextConfig = {
-  env: {},
+  env: {
+    API_BASE: process.env.API_BASE,
+  },
   webpack: (config) => {
     config.plugins.push(new StylelintPlugin());
     return config;

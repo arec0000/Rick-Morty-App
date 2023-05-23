@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image, { StaticImageData } from 'next/image';
 
 import classes from './ContentCard.module.scss';
 
@@ -8,7 +7,7 @@ interface Props {
   title: string;
   description: string;
   footer?: string;
-  img?: StaticImageData;
+  img?: string;
 }
 
 export function ContentCard({
@@ -23,7 +22,7 @@ export function ContentCard({
 
       {!img ? null : (
         <div className={classes.card__img}>
-          <Image src={img} alt={title} fill />
+          <img src={img} alt={title} />
         </div>
       )}
 

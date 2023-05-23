@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   display: block;
   padding: 38px 16px;
   overflow: hidden;
@@ -9,15 +10,35 @@
     0 1px 5px rgb(0 0 0 / 20%),
     0 3px 4px rgb(0 0 0 / 12%),
     0 2px 4px rgb(0 0 0 / 14%);
+  transition: box-shadow .2s;
 
-  &:has(.footer__img) {
-    padding: 0 16px 12px;
+  &:has(&__img) {
+    padding: 168px 16px 12px;
     background-color: #fff;
   }
 
+  &:hover {
+    box-shadow:
+    0 1px 20px rgb(0 0 0 / 20%),
+    0 3px 4px rgb(0 0 0 / 12%),
+    0 2px 4px rgb(0 0 0 / 14%);
+  }
+
   &__img {
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     height: 168px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__title {
