@@ -1,0 +1,48 @@
+.singleLocationPage {
+  &__link {
+    margin-top: 28px;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+    margin-top: 90px;
+  }
+
+  &__title {
+    color: #081F32;
+    font-size: 2.25rem;
+    font-family: var(--font-main);
+    line-height: 2.625rem;
+  }
+
+  &__subinfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 24px;
+  }
+
+  &__subtitle {
+    display: block;
+    color: #081F32;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: var(--font-main);
+    line-height: 1.5rem;
+    letter-spacing: 0.15px;
+  }
+
+  &__text {
+    display: block;
+    color: #6E798C;
+    font-size: .875rem;
+    font-family: var(--font-main);
+    line-height: 1.25rem;
+    letter-spacing: 0.25px;
+  }
+
+  &__feed {
+    margin: 64px 0;
+  }
+}

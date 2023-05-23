@@ -15,6 +15,16 @@
     }
   }
 
+  &__title {
+    margin-bottom: 24px;
+    color: #8E8E93;
+    font-weight: 500;
+    font-size: 1.25rem;
+    font-family: var(--font-main);
+    line-height: 1.5rem;
+    letter-spacing: 0.15px;
+  }
+
   &__content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

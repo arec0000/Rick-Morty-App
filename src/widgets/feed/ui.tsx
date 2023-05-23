@@ -10,6 +10,7 @@ interface Props {
   className?: string;
   pagination?: boolean;
   filters?: FilterProps[];
+  title?: string;
 }
 
 export function Feed({
@@ -18,6 +19,7 @@ export function Feed({
   className,
   pagination,
   filters,
+  title,
 }: Props) {
   return (
     <div className={className}>
@@ -39,6 +41,11 @@ export function Feed({
               />
             )))}
         </div>
+      )}
+      {!title ? null : (
+        <h2 className={classes.feed__title}>
+          {title}
+        </h2>
       )}
       <div className={classes.feed__content} style={{ gridTemplateRows: `{repeat(${columns}, 1fr)}` }}>
         {children}

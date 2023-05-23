@@ -14,7 +14,7 @@ interface Props {
   };
 }
 
-export default async function CharacterPage({ params: { id } }: Props) {
+export default async function singleCharacterPage({ params: { id } }: Props) {
   const character = await getCharacterById(id);
 
   return (
