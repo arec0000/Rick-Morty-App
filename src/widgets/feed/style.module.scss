@@ -2,11 +2,16 @@
   &__filters {
     display: flex;
     gap: 20px;
+    justify-content: center;
     margin-top: 16px;
     margin-bottom: 60px;
 
     & > * {
       flex-grow: 1;
+
+      &:first-child:last-child {
+        max-width: 500px;
+      }
     }
   }
 

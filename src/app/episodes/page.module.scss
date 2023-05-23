@@ -1,0 +1,16 @@
+.episodesPage {
+  display: flex;
+  flex-direction: column;
+  padding-top: 86px;
+
+  &__banner {
+    position: relative;
+    width: 270px;
+    height: 210px;
+    margin: 0 auto;
+  }
+
+  &__feed {
+    margin: 16px 0 44px;
+  }
+}

@@ -2,23 +2,23 @@ import { ContentCard } from '@/shared/ui';
 
 interface Props {
   href: string;
-  thumbnail: string;
   name: string;
-  species: string;
+  date: string;
+  episode: string;
 }
 
-export function CharacterCard({
+export function EpisodeCard({
   href,
   name,
-  thumbnail,
-  species,
+  date,
+  episode,
 }: Props) {
   return (
     <ContentCard
       href={href}
-      img={thumbnail}
       title={name}
-      description={species}
+      description={date}
+      footer={episode}
     />
   );
 }

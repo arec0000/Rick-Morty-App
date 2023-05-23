@@ -27,7 +27,7 @@ export function Select({ placeholder, options, onChange }: Props) {
       <select onChange={handleChange}>
         <option value="">{placeholder}</option>
         {options.map((option) => (
-          <option value={option.value}>{option.name}</option>
+          <option key={option.value} value={option.value}>{option.name}</option>
         ))}
       </select>
     </label>

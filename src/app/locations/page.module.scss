@@ -1,0 +1,16 @@
+.locationPage {
+  display: flex;
+  flex-direction: column;
+  padding-top: 86px;
+
+  &__banner {
+    position: relative;
+    width: 326px;
+    height: 202px;
+    margin: 0 auto;
+  }
+
+  &__feed {
+    margin: 16px 0 44px;
+  }
+}

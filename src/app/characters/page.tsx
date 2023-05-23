@@ -2,9 +2,9 @@ import Image from 'next/image';
 import { Feed } from '@/widgets/feed';
 import { CharacterCard, getCharacters } from '@/entities/Character';
 
-import classes from './style.module.scss';
+import classes from './page.module.scss';
 
-import { filters } from './consts';
+import { filters } from './config';
 
 import banner from './assets/banner.png';
 
@@ -45,10 +45,10 @@ export default async function CharactersPage({
         pagination
         filters={filters}
       >
-        {characters.results?.slice(0, 3 * 4).map((character) => (
+        {characters.results?.slice(0, 2 * 4).map((character) => (
           <CharacterCard
             key={character.id}
-            url={character.url}
+            href={`characters/${character.id}`}
             name={character.name}
             thumbnail={character.image}
             species={character.species}

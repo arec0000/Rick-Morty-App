@@ -9,6 +9,7 @@ export function useSetSeachParam(): (key: string, value: string) => void {
 
   return (key, value) => {
     params.set(key, value);
+    params.delete('page');
     const nextUrl = `${pathname}?${params.toString()}`;
     router.push(nextUrl);
   };
