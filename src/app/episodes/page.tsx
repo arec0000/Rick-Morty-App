@@ -31,7 +31,7 @@ export default async function CharactersPage({ searchParams: { page, name } }: P
         {locations.results?.slice(0, 3 * 4).map((location) => (
           <EpisodeCard
             key={location.id}
-            href={`locations/${location.id}`}
+            href={`episodes/${location.id}`}
             name={location.name}
             date={location.air_date}
             episode={location.episode}
