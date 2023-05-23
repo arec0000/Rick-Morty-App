@@ -8,7 +8,7 @@ interface Props {
 export function SearchInput({ onChange, placeholder }: Props) {
   return (
     <div className={classes.input}>
-      <img src="./search.svg" alt="search icon" />
+      <img src="/search.svg" alt="search icon" />
       <input
         type="text"
         placeholder={placeholder}

@@ -1,0 +1,47 @@
+.contentLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px 12px;
+  text-decoration: none;
+  border-bottom: 1px solid #EDEDED;
+
+  &__header {
+    display: block;
+    overflow: hidden;
+    color: #081F32;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: var(--font-main);
+    line-height: 1.5rem;
+    letter-spacing: 0.15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__description {
+    display: block;
+    overflow: hidden;
+    color: #6E798C;
+    font-size: .875rem;
+    font-family: var(--font-main);
+    line-height: 1.25rem;
+    letter-spacing: 0.25px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__footer {
+    display: block;
+    margin-top: 2px;
+    overflow: hidden;
+    color: #8E8E93;
+    font-weight: 500;
+    font-size: .625rem;
+    font-family: var(--font-main);
+    line-height: 1rem;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

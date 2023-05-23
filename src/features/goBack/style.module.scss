@@ -1,0 +1,29 @@
+.back {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.125rem;
+  font-family: var(--font-secondary);
+  line-height: 1.3125rem;
+  text-decoration: none;
+  transition: color .2s;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  path {
+    transition: fill .2s;
+  }
+
+  &:hover {
+    color: #00B0C8;
+
+    path {
+      fill: #00B0C8;
+    }
+  }
+}
