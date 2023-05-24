@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: 'Rick & Morty | episodes',
 };
 
-export default async function CharactersPage({ searchParams: { page, name } }: Props) {
+export default async function EpisodesPage({ searchParams: { page, name } }: Props) {
   const locations = await getMany('episode', { page, name });
   return (
     <div className={classes.episodesPage}>

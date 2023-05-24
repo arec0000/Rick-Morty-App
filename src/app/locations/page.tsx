@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: 'Rick & Morty | locations',
 };
 
-export default async function CharactersPage({
+export default async function LocationsPage({
   searchParams: {
     page,
     name,
