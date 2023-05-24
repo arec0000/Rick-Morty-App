@@ -2,7 +2,7 @@ import { GoBack } from '@/features/goBack';
 import { Feed } from '@/widgets/feed';
 import { CharacterCardById } from '@/entities/Character';
 
-import { getLocationById } from '@/entities/Location';
+import { getOneById } from '@/shared/api/RickAndMortyApi';
 
 import { getIdFormUrl } from '@/shared/helpers';
 
@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default async function singleLocationPage({ params: { id } }: Props) {
-  const location = await getLocationById(id);
+  const location = await getOneById('location', id);
 
   return (
     <div>

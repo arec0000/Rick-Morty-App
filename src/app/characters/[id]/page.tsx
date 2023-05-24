@@ -1,7 +1,7 @@
 import { GoBack } from '@/features/goBack';
 import { ContentLine } from '@/features/contentLine';
 
-import { getCharacterById } from '@/entities/Character';
+import { getOneById } from '@/shared/api/RickAndMortyApi';
 import { EpisodeLine } from '@/entities/Episodes';
 
 import { getIdFormUrl } from '@/shared/helpers';
@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default async function singleCharacterPage({ params: { id } }: Props) {
-  const character = await getCharacterById(id);
+  const character = await getOneById('character', id);
 
   return (
     <div>

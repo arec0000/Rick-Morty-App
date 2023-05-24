@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Feed } from '@/widgets/feed';
-import { LocationCard, getLocations } from '@/entities/Location';
+import { LocationCard } from '@/entities/Location';
+import { getMany } from '@/shared/api/RickAndMortyApi';
 
 import classes from './page.module.scss';
 
@@ -25,7 +26,7 @@ export default async function CharactersPage({
     dimension,
   },
 }: Props) {
-  const locations = await getLocations({
+  const locations = await getMany('location', {
     page,
     name,
     type,

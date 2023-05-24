@@ -1,4 +1,4 @@
-export function makeUrl(baseUrl: string, searchParams?: Record<string, string>): string {
+export function makeUrl(baseUrl: string, searchParams?: Partial<Record<string, string>>): string {
   if (!searchParams) {
     return baseUrl;
   }

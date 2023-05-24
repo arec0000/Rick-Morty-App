@@ -1,13 +1,13 @@
 import { ContentLine } from '@/features/contentLine';
 
-import { getEpisodeById } from '../api/getEpisodeById';
+import { getOneById } from '@/shared/api/RickAndMortyApi';
 
 interface Props {
   id: string;
 }
 
 export async function EpisodeLine({ id }: Props) {
-  const episode = await getEpisodeById(id);
+  const episode = await getOneById('episodes', id);
   return (
     <ContentLine
       href={`/episodes/${id}`}

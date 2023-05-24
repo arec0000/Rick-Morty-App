@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Feed } from '@/widgets/feed';
-import { CharacterCard, getCharacters } from '@/entities/Character';
+import { CharacterCard } from '@/entities/Character';
+import { getMany } from '@/shared/api/RickAndMortyApi';
 
 import classes from './page.module.scss';
 
@@ -27,7 +28,7 @@ export default async function CharactersPage({
     status,
   },
 }: Props) {
-  const characters = await getCharacters({
+  const characters = await getMany('character', {
     page,
     name,
     species,

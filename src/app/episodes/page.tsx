@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Feed } from '@/widgets/feed';
-import { EpisodeCard, getEpisodes } from '@/entities/Episodes';
+import { EpisodeCard } from '@/entities/Episodes';
+import { getMany } from '@/shared/api/RickAndMortyApi';
 
 import classes from './page.module.scss';
 
@@ -16,7 +17,7 @@ interface Props {
 }
 
 export default async function CharactersPage({ searchParams: { page, name } }: Props) {
-  const locations = await getEpisodes({ page, name });
+  const locations = await getMany('episodes', { page, name });
   return (
     <div className={classes.episodesPage}>
       <div className={classes.episodesPage__banner}>

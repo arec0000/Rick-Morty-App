@@ -2,7 +2,7 @@ import { GoBack } from '@/features/goBack';
 import { Feed } from '@/widgets/feed';
 import { CharacterCardById } from '@/entities/Character';
 
-import { getEpisodeById } from '@/entities/Episodes/api/getEpisodeById';
+import { getOneById } from '@/shared/api/RickAndMortyApi';
 
 import { getIdFormUrl } from '@/shared/helpers';
 
@@ -15,7 +15,7 @@ interface Props {
 }
 
 export default async function singleEpisodePage({ params: { id } }: Props) {
-  const episode = await getEpisodeById(id);
+  const episode = await getOneById('episodes', id);
 
   return (
     <div>

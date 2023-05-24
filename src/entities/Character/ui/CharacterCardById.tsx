@@ -1,13 +1,13 @@
-import { CharacterCard } from './CharacterCard';
+import { getOneById } from '@/shared/api/RickAndMortyApi';
 
-import { getCharacterById } from '../api/getCharacterById';
+import { CharacterCard } from './CharacterCard';
 
 interface Props {
   id: string;
 }
 
 export async function CharacterCardById({ id }: Props) {
-  const character = await getCharacterById(id);
+  const character = await getOneById('character', id);
   return (
     <CharacterCard
       href={`/characters/${id}`}
