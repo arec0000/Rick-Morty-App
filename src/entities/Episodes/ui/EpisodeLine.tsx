@@ -7,7 +7,7 @@ interface Props {
 }
 
 export async function EpisodeLine({ id }: Props) {
-  const episode = await getOneById('episodes', id);
+  const episode = await getOneById('episode', id);
   return (
     <ContentLine
       href={`/episodes/${id}`}
