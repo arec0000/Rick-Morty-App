@@ -30,7 +30,7 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="ru" className={clsx(roboto.variable, karla.variable)}>
+    <html lang="en" className={clsx(roboto.variable, karla.variable)}>
       <body>
         <div className={classes.rootLayout}>
           <Header />
