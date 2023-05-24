@@ -1,8 +1,9 @@
+import { Metadata } from 'next';
 import { GoBack } from '@/features/goBack';
 import { Feed } from '@/widgets/feed';
 import { CharacterCardById } from '@/entities/Character';
 
-import { getOneById } from '@/shared/api/RickAndMortyApi';
+import { getOneById } from '@/shared/api/RickAndMorty';
 
 import { getIdFormUrl } from '@/shared/helpers';
 
@@ -14,8 +15,16 @@ interface Props {
   };
 }
 
+export async function generateMetadata({ params: { id } }: Props): Promise<Metadata> {
+  const episode = await getOneById('episode', id);
+
+  return {
+    title: episode.name,
+  };
+}
+
 export default async function singleEpisodePage({ params: { id } }: Props) {
-  const episode = await getOneById('episodes', id);
+  const episode = await getOneById('episode', id);
 
   return (
     <div>

@@ -1,2 +1,2 @@
-export { makeUrl } from '../api/RickAndMortyApi/makeUrl';
+export { makeUrl } from '../api/RickAndMorty/makeUrl';
 export { getIdFormUrl } from './getIdFormUrl';

@@ -1,6 +1,6 @@
 import { ContentLine } from '@/features/contentLine';
 
-import { getOneById } from '@/shared/api/RickAndMortyApi';
+import { getOneById } from '@/shared/api/RickAndMorty';
 
 interface Props {
   id: string;

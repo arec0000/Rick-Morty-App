@@ -1,8 +1,9 @@
+import { Metadata } from 'next';
 import { GoBack } from '@/features/goBack';
 import { Feed } from '@/widgets/feed';
 import { CharacterCardById } from '@/entities/Character';
 
-import { getOneById } from '@/shared/api/RickAndMortyApi';
+import { getOneById } from '@/shared/api/RickAndMorty';
 
 import { getIdFormUrl } from '@/shared/helpers';
 
@@ -11,6 +12,14 @@ import classes from './page.module.scss';
 interface Props {
   params: {
     id: string
+  };
+}
+
+export async function generateMetadata({ params: { id } }: Props): Promise<Metadata> {
+  const location = await getOneById('location', id);
+
+  return {
+    title: location.name,
   };
 }
 

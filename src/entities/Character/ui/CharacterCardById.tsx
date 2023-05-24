@@ -1,4 +1,4 @@
-import { getOneById } from '@/shared/api/RickAndMortyApi';
+import { getOneById } from '@/shared/api/RickAndMorty';
 
 import { CharacterCard } from './CharacterCard';
 

@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import { Metadata } from 'next';
 import { Feed } from '@/widgets/feed';
 import { LocationCard } from '@/entities/Location';
-import { getMany } from '@/shared/api/RickAndMortyApi';
+import { getMany } from '@/shared/api/RickAndMorty';
 
 import classes from './page.module.scss';
 
@@ -17,6 +18,10 @@ interface Props {
     dimension?: string;
   }
 }
+
+export const metadata: Metadata = {
+  title: 'Rick & Morty | locations',
+};
 
 export default async function CharactersPage({
   searchParams: {

@@ -2,14 +2,14 @@ import { Character, Location, Episode } from './types';
 
 const { API_BASE } = process.env;
 
-type Data<T extends 'character' | 'location' | 'episodes'> =
+type Data<T extends 'character' | 'location' | 'episode'> =
   T extends 'character' ?
     Character
   : T extends 'location' ?
     Location
   : Episode;
 
-export async function getOneById<T extends 'character' | 'location' | 'episodes'>(
+export async function getOneById<T extends 'character' | 'location' | 'episode'>(
   type:T,
   id: string,
 ): Promise<Data<T>> {

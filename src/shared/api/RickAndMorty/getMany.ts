@@ -3,7 +3,7 @@ import { Character, Location, Episode } from './types';
 
 const { API_BASE } = process.env;
 
-interface Data<T extends 'character' | 'location' | 'episodes'> {
+interface Data<T extends 'character' | 'location' | 'episode'> {
   info: {
     count: number,
     pages: number,
@@ -22,7 +22,7 @@ type CharactersOptions = Record<'name' | 'species' | 'gender' | 'status' | 'page
 type LocationsOptions = Record<'name' | 'type' | 'dimension' | 'page', string>;
 type EpisodesOptions = Record<'name' | 'page', string>;
 
-type Options<T extends 'character' | 'location' | 'episodes'> = Partial<
+type Options<T extends 'character' | 'location' | 'episode'> = Partial<
   T extends 'character' ?
     CharactersOptions
   : T extends 'location' ?
@@ -30,7 +30,7 @@ type Options<T extends 'character' | 'location' | 'episodes'> = Partial<
   : EpisodesOptions
 >;
 
-export async function getMany<T extends 'character' | 'location' | 'episodes'>(
+export async function getMany<T extends 'character' | 'location' | 'episode'>(
   type: T,
   options?: Options<T>,
 ): Promise<Data<T>> {

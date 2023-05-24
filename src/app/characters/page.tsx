@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import { Metadata } from 'next';
 import { Feed } from '@/widgets/feed';
 import { CharacterCard } from '@/entities/Character';
-import { getMany } from '@/shared/api/RickAndMortyApi';
+import { getMany } from '@/shared/api/RickAndMorty';
 
 import classes from './page.module.scss';
 
@@ -18,6 +19,10 @@ interface Props {
     status?: string;
   }
 }
+
+export const metadata: Metadata = {
+  title: 'Rick & Morty | characters',
+};
 
 export default async function CharactersPage({
   searchParams: {

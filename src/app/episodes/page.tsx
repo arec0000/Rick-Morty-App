@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import { Metadata } from 'next';
 import { Feed } from '@/widgets/feed';
 import { EpisodeCard } from '@/entities/Episodes';
-import { getMany } from '@/shared/api/RickAndMortyApi';
+import { getMany } from '@/shared/api/RickAndMorty';
 
 import classes from './page.module.scss';
 
@@ -16,8 +17,12 @@ interface Props {
   }
 }
 
+export const metadata: Metadata = {
+  title: 'Rick & Morty | episodes',
+};
+
 export default async function CharactersPage({ searchParams: { page, name } }: Props) {
-  const locations = await getMany('episodes', { page, name });
+  const locations = await getMany('episode', { page, name });
   return (
     <div className={classes.episodesPage}>
       <div className={classes.episodesPage__banner}>
