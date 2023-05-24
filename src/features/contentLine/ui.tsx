@@ -17,6 +17,9 @@ export function ContentLine({
   footer,
   href,
 }: Props) {
+  if (!title || !description) {
+    return null;
+  }
   if (!href) {
     return (
       <div className={classes.contentLine}>
